@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "ElevenLabs MCP Agent",
+    "host_permissions": [
+        "https://*.elevenlabs.io/*",
+        "ws://*.elevenlabs.io/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["content.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "env": [
+        {
+            "key": "AGENT_KEY",
+            "value": "agent_0123abcdefghijklomnopqrstuvw"
+        },
+        {
+            "key": "SPACE_REST_KEY",
+            "value": "rk_ABCdefGHJklmNOPqrsTUVwxyz0123456"
+        }
+    ]
+}
