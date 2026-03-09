@@ -155,7 +155,7 @@ Assistant message:
 
 Tool calls:
 - `click("27")`
-- `naviagte("https://example.org")`
+- `navigate("https://example.org")`
 
 **Important:** Do not describe internal reasoning.
 
