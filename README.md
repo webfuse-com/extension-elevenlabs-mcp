@@ -60,11 +60,11 @@ Paste your agent's ID as shown on the ElevenLabs platform to the extension manif
 }
 ```
 
-> The tools you previously created on the ElevenLabs platform are mirrored in the extension content script ([`content.js`](./popup.agent.js)). Make sure the names and argument names are correct. If you use the tool descriptions in `elevenlabs_tools/`, you are good to go.
+> ⚠️ &hairsp; Keep your REST API key secret. Do not share it or commit it to public repositories. Check this [guide](https://dev.webfu.se/extension-structure/#env) on how to manage environment variables securely.
 
 ### 2.2 Configure a Space
 
-Create a Webfuse [Space](https://dev.webfu.se/spaces-sessions), point it at the website you want to automate, and install your extension. You are all set!
+[Create a Webfuse Space](https://dev.webfu.se/session-mcp-server/#configuration), enable Automation app, and install your extension. You are all set!
 
 ## Further Reading
 
