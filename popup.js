@@ -1,6 +1,5 @@
 async function init() {
     const dynamicVariables = {
-        "space__rest_key": `Bearer ${browser.webfuseSession.env.SPACE_REST_KEY}`,
         "session__id": (await browser.webfuseSession.getSessionInfo()).sessionId
     };
 

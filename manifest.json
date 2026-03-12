@@ -22,10 +22,6 @@
         {
             "key": "AGENT_KEY",
             "value": "agent_0123abcdefghijklomnopqrstuvw"
-        },
-        {
-            "key": "SPACE_REST_KEY",
-            "value": "rk_ABCdefGHJklmNOPqrsTUVwxyz0123456"
         }
     ]
 }

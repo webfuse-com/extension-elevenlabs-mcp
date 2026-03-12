@@ -43,7 +43,7 @@ Define tools that allow the agent to interact with the live web.
 
 ### 2.1 Update Credentials
 
-Paste your agent's ID as shown on the ElevenLabs platform to the extension manifest ([`manifest.json`](./manifest.json)). And, moreover, your Webfuse Space's REST API key as a means of MCP authentication.
+Paste your agent's ID as shown on the ElevenLabs platform to the extension manifest ([`manifest.json`](./manifest.json)).
 
 ``` json
 {
@@ -51,20 +51,18 @@ Paste your agent's ID as shown on the ElevenLabs platform to the extension manif
     {
       "key": "AGENT_KEY",
       "value": "agent_0123abcdefghijklomnopqrstuvw"
-    },
-    {
-      "key": "SPACE_REST_KEY",
-      "value": "rk_ABCdefGHJklmNOPqrsTUVwxyz0123456"
     }
   ]
 }
 ```
 
-> The tools you previously created on the ElevenLabs platform are mirrored in the extension content script ([`content.js`](./popup.agent.js)). Make sure the names and argument names are correct. If you use the tool descriptions in `elevenlabs_tools/`, you are good to go.
+Your Webfuse Space's REST API key (e.g., `"rk_ABCdefGHJklmNOPqrsTUVwxyz0123456"`) is used for MCP authentication. Assign it as the default value for `space__rest_key` in the ElevenLabs platform. This ensures it is hidden from the client scope (unlike `env` variable values).
+
+> ⚠️ &hairsp; Keep your REST API key secret. Do not share it or commit it to public repositories. Check this [guide](https://dev.webfu.se/extension-structure/#env) on how to manage environment variables securely.
 
 ### 2.2 Configure a Space
 
-Create a Webfuse [Space](https://dev.webfu.se/spaces-sessions), point it at the website you want to automate, and install your extension. You are all set!
+[Create a Webfuse Space](https://dev.webfu.se/session-mcp-server/#configuration), enable Automation app, and install your extension. You are all set!
 
 ## Further Reading
 
